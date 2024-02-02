@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    <label for="formheader" class="formheader">Add Expense</label>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                    <form [formGroup]="addExpenseForm" (ngSubmit)="addExpense()">
+                        <div class="form-group">
+                            <label for="expenseType"></label>
+                            <select formControlName="expenseType" name="expenseType" id="expenseType"
+                                class="form-control">
+                                <option value="">Select Expense Type</option>
+                                <option *ngFor="let t of expenseTypes" value="{{t}}">{{t}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="expenseAmount">Expense Amount:</label> <br>
+                            <input type="number" id="expenseAmount" formControlName="expenseAmount" required
+                                placeholder="Expense Amount">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="date">Date:</label> <br>
+                            <input type="date" id="date" formControlName="date" required>
+                        </div>
+                        <div class="mt-3 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-dark"
+                                [disabled]="addExpenseForm.invalid">Submit</button>
+                        </div>
+                        <span *ngIf="success">{{success}}</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
