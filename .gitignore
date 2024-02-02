@@ -1,2 +1,46 @@
-./expense/node_modules
-./mongodb
+/expense/node_modules
+/mongodb
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/expense/dist
+/expense/tmp
+/expense/out-tsc
+/expense/bazel-out
+
+# Node
+/expense/node_modules
+/expense/npm-debug.log
+/expense/yarn-error.log
+
+# IDEs and editors
+/expense/.idea/
+/expense/.project
+/expense/.classpath
+/expense/.c9/
+/expense/*.launch
+/expense/.settings/
+/expense/*.sublime-workspace
+
+# Visual Studio Code
+/expense/.vscode/*
+/expense/!.vscode/settings.json
+/expense/!.vscode/tasks.json
+/expense/!.vscode/launch.json
+/expense/!.vscode/extensions.json
+/expense/.history/*
+
+# Miscellaneous
+/expense/.angular/cache
+/expense/.sass-cache/
+/expense/connect.lock
+/expense/coverage
+/expense/libpeerconnection.log
+/expense/testem.log
+/expense/typings
+
+# System files
+/expense/.DS_Store
+/expense/Thumbs.db
+
